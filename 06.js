@@ -7,6 +7,23 @@ const students = [
   { name: "정윤오", scores: [75, 70] },
 ];
 
+const chain = students
+  .map(item => ({
+    // 1. map으로 기존 배열 복사 후 어떻게 filter메서드에 값을 넘겨줄건가 
+    // 도저히 모르겠어서 검색 후 적용
+    name: item.name,
+    scores: item.scores.reduce((a, b) => a + b, 0) / item.scores.length
+  }))
+  // 2. filter 메서드를 사용해 반환 받은 name,scores 중 score 점수를 비교해서 평균을 가려냄
+  .filter(item => item.scores >= 80)
+  // 3. 이름만 반환함 
+  .map(item => item.name);
+
+
+console.log(chain);
+
+
+
 // 여기에 코드를 작성해주세요
 // 예상 출력: ["이재상", "김준현"]
 
