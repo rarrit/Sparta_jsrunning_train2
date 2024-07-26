@@ -10,7 +10,7 @@ console.log('01. 결과 값: [100, 200, 300]을 출력해주세요 =>', arrAdd10
 let arr2 = [10, 22, 33]
 // 5의 배수를 찾아 반환해주세요
 // 결과값 [10]을 출력해주세요
-let arrFilterFive = arr.filter(item => item % 5 === 0);
+let arrFilterFive = arr2.filter(item => item % 5 === 0);
 console.log('02. 결과값 [10]을 출력해주세요 =>', arrFilterFive); // 10
 
 // [03] 문제 ------------------------------------------------------------------------------------------ *
